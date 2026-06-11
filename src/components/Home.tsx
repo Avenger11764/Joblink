@@ -147,9 +147,7 @@ export default function Home({ onNavigate, setSearchQuery }: HomeProps) {
 
   return (
     <div className="space-y-0 pb-16 animate-fade-in-up">
-      
-      {}
-      <section className="relative h-[550px] w-full overflow-hidden mt-0">
+      <section className="relative h-[450px] md:h-[550px] w-full overflow-hidden mt-0">
         <div 
           className="flex h-full transition-transform duration-700 ease-out" 
           style={{ width: `${totalSlides * 100}%`, transform: `translateX(-${currentSlide * (100 / totalSlides)}%)` }}
@@ -196,7 +194,6 @@ export default function Home({ onNavigate, setSearchQuery }: HomeProps) {
           ))}
         </div>
 
-        {}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
           {slides.map((_, index) => (
             <button
@@ -212,7 +209,6 @@ export default function Home({ onNavigate, setSearchQuery }: HomeProps) {
         </div>
       </section>
 
-      {}
       <section ref={sectionRef} className="py-16 px-6 md:px-16 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
@@ -246,10 +242,7 @@ export default function Home({ onNavigate, setSearchQuery }: HomeProps) {
         </div>
       </section>
 
-      {}
       <section className="relative overflow-hidden mt-12 space-y-12">
-        
-        {}
         <div className="w-full">
           <div className="flex flex-col md:flex-row items-center min-h-[600px] gap-12 px-6 md:px-16 py-16 max-w-7xl mx-auto w-full">
             <div 
@@ -290,7 +283,6 @@ export default function Home({ onNavigate, setSearchQuery }: HomeProps) {
           </div>
         </div>
 
-        {/* Seamless Placement */}
         <div className="bg-surface-container w-full">
           <div className="flex flex-col md:flex-row-reverse items-center min-h-[600px] gap-12 px-6 md:px-16 py-16 max-w-7xl mx-auto w-full">
             <div 
@@ -323,7 +315,6 @@ export default function Home({ onNavigate, setSearchQuery }: HomeProps) {
 
       </section>
 
-      {/* Pricing Section */}
       <section className="py-24 px-6 md:px-16 bg-surface">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-display-lg text-4xl md:text-5xl font-extrabold text-on-surface mb-6">
@@ -443,7 +434,6 @@ export default function Home({ onNavigate, setSearchQuery }: HomeProps) {
         )}
       </section>
 
-      {/* FAQ Section */}
       <section className="py-24 px-6 md:px-16 bg-surface-container-low rounded-3xl">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display-lg text-4xl md:text-5xl font-extrabold text-on-surface text-center mb-16">
@@ -515,7 +505,6 @@ export default function Home({ onNavigate, setSearchQuery }: HomeProps) {
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section className="py-24 px-6 md:px-16 relative overflow-hidden rounded-3xl bg-white/20 border border-outline-variant shadow-lg mt-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
           <div className="w-full md:w-1/2 text-left">

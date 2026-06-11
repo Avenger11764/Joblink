@@ -9,7 +9,6 @@ import EducationStep from './components/EducationStep';
 import SkillsCoverLetterStep from './components/SkillsCoverLetterStep';
 import ResumeUploadStep from './components/ResumeUploadStep';
 import FinalReviewStep from './components/FinalReviewStep';
-import ParticleBackground from './components/ParticleBackground';
 
 import { 
   User, 
@@ -283,9 +282,6 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col font-sans antialiased text-on-background relative">
       <div className="fixed inset-0 bg-background z-[-2] pointer-events-none" />
-      <ParticleBackground />
-      
-      {}
       {toastMessage && (
         <div className="fixed top-24 right-6 z-50 bg-white border border-[#9b8ec4]/30 text-on-background font-bold text-xs px-5 py-3 rounded-xl shadow-lg flex items-center gap-3 animate-bounce">
           <Check size={14} className="text-primary" />
@@ -293,7 +289,6 @@ export default function App() {
         </div>
       )}
 
-      {}
       <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-12 h-16 bg-white/40 backdrop-blur-xl border-b border-white/40 shadow-[0_8px_32px_0_rgba(155,142,196,0.1)]">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigateToPage('home')}>
           <span className="material-symbols-outlined text-primary text-3xl">hub</span>
@@ -328,7 +323,6 @@ export default function App() {
         </div>
 
         <div className="flex items-center gap-3">
-          {}
           <button 
             onClick={() => navigateToPage('apply')} 
             className="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold text-xs hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg shadow-primary/20 cursor-pointer"
@@ -336,7 +330,6 @@ export default function App() {
             Apply Now
           </button>
 
-          {}
           <button 
             className="md:hidden p-2 text-on-surface-variant hover:bg-white/20 rounded-full transition-all duration-200"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -345,7 +338,6 @@ export default function App() {
           </button>
         </div>
 
-        {}
         {mobileMenuOpen && (
           <div className="absolute top-16 left-0 w-full border-t border-outline-variant bg-surface px-4 py-4 space-y-2 text-xs font-bold uppercase tracking-wider text-on-surface-variant animate-fade-in-up shadow-lg z-50">
             <div onClick={() => navigateToPage('home')} className={`py-2 px-2.5 rounded-lg cursor-pointer ${currentPage === 'home' ? 'bg-primary-container text-on-primary-container' : 'hover:bg-surface-container'}`}>Home</div>
@@ -364,7 +356,6 @@ export default function App() {
         )}
       </nav>
 
-      {}
       <main className="flex-1 mt-16">
         
         {currentPage === 'home' && (
@@ -385,7 +376,6 @@ export default function App() {
 
         {currentPage === 'apply' && (
           <div className="max-w-7xl w-full mx-auto px-4 py-8">
-            {}
             <section className="mb-8 text-left">
               <div className="flex justify-between items-end mb-4">
                 <div>
@@ -412,11 +402,9 @@ export default function App() {
               </div>
             </section>
 
-            {}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              {}
-              <aside className="lg:col-span-3 space-y-6">
-                <nav className="space-y-1 glass-panel p-4 rounded-2xl sticky top-24">
+              <aside className="lg:col-span-3">
+                <nav className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible scrollbar-hide glass-panel p-3 lg:p-4 rounded-2xl sticky top-20 lg:top-24 max-w-full whitespace-nowrap lg:whitespace-normal">
                   {steps.map((s) => {
                     const isActive = s.key === activeStep;
                     const isCompleted = currentStepObject.index > s.index;
@@ -434,7 +422,7 @@ export default function App() {
                       <button
                         key={s.key}
                         onClick={() => jumpToStep(s.key)}
-                        className={`w-full text-left p-3.5 rounded-xl transition-all cursor-pointer flex items-center gap-3 border ${
+                        className={`flex-shrink-0 w-auto lg:w-full text-left p-3 lg:p-3.5 rounded-xl transition-all cursor-pointer flex items-center gap-3 border ${
                           isActive 
                             ? 'border-primary bg-primary/5 step-active font-bold' 
                             : 'border-transparent text-[var(--text-secondary)] hover:bg-white/30 dark:hover:bg-white/10'
@@ -453,7 +441,6 @@ export default function App() {
                 </nav>
               </aside>
 
-              {}
               <div className="lg:col-span-9 space-y-6">
                 
                 {activeStep === 'personal-info' && (
@@ -522,7 +509,6 @@ export default function App() {
 
       </main>
 
-      {}
       {showBackToTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -533,7 +519,6 @@ export default function App() {
         </button>
       )}
 
-      {}
       <footer className="w-full py-12 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-8 bg-surface-container-low border-t border-outline-variant mt-16 text-left">
         <div className="max-w-xs space-y-4">
           <div className="flex items-center gap-2">
