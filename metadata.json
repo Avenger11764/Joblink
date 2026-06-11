@@ -1,6 +1,0 @@
-{
-  "name": "CareerLaunch",
-  "description": "A highly interactive, professional, multi-step job application portal featuring personal detail inputs, experience logs, academic background, key skill categories, AI-enhanced cover letter drafts, drag-and-drop resume uploading, and comprehensive final reviews.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
