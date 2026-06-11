@@ -9,6 +9,7 @@ import EducationStep from './components/EducationStep';
 import SkillsCoverLetterStep from './components/SkillsCoverLetterStep';
 import ResumeUploadStep from './components/ResumeUploadStep';
 import FinalReviewStep from './components/FinalReviewStep';
+import ParticleBackground from './components/ParticleBackground';
 
 import { 
   User, 
@@ -282,6 +283,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col font-sans antialiased text-on-background relative">
       <div className="fixed inset-0 bg-background z-[-2] pointer-events-none" />
+      <ParticleBackground />
       {toastMessage && (
         <div className="fixed top-24 right-6 z-50 bg-white border border-[#9b8ec4]/30 text-on-background font-bold text-xs px-5 py-3 rounded-xl shadow-lg flex items-center gap-3 animate-bounce">
           <Check size={14} className="text-primary" />
